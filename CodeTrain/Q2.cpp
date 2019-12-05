@@ -1,20 +1,27 @@
 #include <iostream>
 using namespace std;
 
-int remove(char* s, int num) {
+int remove(char *s, int num)
+{
   char back = '\0', now = '\0';
   int i = 0;
-  while (num > 0) {
-    if (now == '\0') {  //第一次
+  while (num > 0)
+  {
+    if (now == '\0')
+    { //第一次
       back == -1;
       now = *(s + i);
-    } else if (back == '\0' && now != -1) {
+    }
+    else if (back == '\0' && now != -1)
+    {
       back = now;
       now = *(s + i);
-    } else {
-      if (back == '0' && now == '1' || back == '1' && now == '0') {
+    }
+    else
+    {
+      if (back == '0' && now == '1' || back == '1' && now == '0')
+      {
         num -= 2;
-
       }
       back = now;
       now = *(s + i);
@@ -24,7 +31,8 @@ int remove(char* s, int num) {
   return num;
 }
 
-int main() {
+int main()
+{
   int n;
   char s[200000];
 

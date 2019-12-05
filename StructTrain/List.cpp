@@ -2,34 +2,34 @@
 
 typedef int elemtype;
 
-//Ë³Ðò±í
+//Ë³ï¿½ï¿½ï¿½
 struct Sequlist {
 	elemtype data[MAXSIZE];
-	int last;//×î´óµÄ³¤¶È
+	int last;//ï¿½ï¿½ï¿½Ä³ï¿½ï¿½ï¿½
 };
 
-//µ¥Á´±í
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 typedef struct Node {
 	elemtype data;
 	struct Node *next;
 } SingleLinkList;
-LinkList *head;
-//²åÈë½Úµã É¾³ý½Úµã
-//µ¥Á´±íµÄÄæÖÃ 
+SingleLinkList *head;
+//ï¿½ï¿½ï¿½ï¿½Úµï¿½ É¾ï¿½ï¿½ï¿½Úµï¿½
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 
 
-//¾²Ì¬Á´±í
+//ï¿½ï¿½Ì¬ï¿½ï¿½ï¿½ï¿½
 struct StaticNode {
 	elemtype data;
 	int link;
 };
 StaticNode Student[7];
 
-//Ñ­»·Á´±í
+//Ñ­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
-//Ë«ÏòÁ´±í
+//Ë«ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 typedef struct DNode {
 	elemtype data;
-	struct DNode *prior,*next;//Ç°Çý ºó¼Ì 
+	struct DNode *prior,*next;//Ç°ï¿½ï¿½ ï¿½ï¿½ï¿½ 
 } DoubleLinkList;
 DoubleLinkList *head;
 

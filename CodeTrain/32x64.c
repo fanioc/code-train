@@ -1,11 +1,19 @@
 #include <stdio.h>
 #include <stdlib.h>
-int main() {
-  unsigned int i = 0xffffffff;
-  if (i > 0) {
-    printf("%u\n",-1);
+int main()
+{
+  double *p;
+  int z = sizeof(p);
+
+  printf("%d\n", z);
+
+  if (z == 8)
+  {
+    printf("%d\n", z);
     printf("64bit \n");
-  } else {
+  }
+  else
+  {
     printf("32bits \n");
   }
   system("pause");
