@@ -1,9 +1,15 @@
+/*
+ * @Author: Fanioc
+ * @Date: 2019-12-06 16:48:21
+ * @Last Modified by:   Fanioc
+ * @Last Modified time: 2019-12-06 16:48:21
+ * @Note:
+ */
 #include <stdio.h>
-#include <string.h>
 
 void move(int n, int a, int b, int c) {
-  if (n == 1)                       // dsfasf
-    printf(":: %c -> %c\n", a, c);  // dsaf
+  if (n == 1)
+    printf(":: %c -> %c\n", a, c);
   else {
     move(n - 1, a, c, b);
     printf(":: %c -> %c\n", a, c);
