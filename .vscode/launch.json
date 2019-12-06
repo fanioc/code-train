@@ -5,13 +5,28 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "(Windows) Launch",
+      "name": "(GCC) Launch",
       "type": "cppvsdbg",
       "request": "launch",
       "program": "cmd",
       "args": [
-        "/K",
-        "${fileDirname}/${fileBasenameNoExtension}.exe",
+        "/k",
+        "${fileBasenameNoExtension}.exe"
+      ],
+      "stopAtEntry": false,
+      "preLaunchTask": "gcc",
+      "cwd": "${fileDirname}",
+      "environment": [],
+      "externalConsole": true
+    },
+    {
+      "name": "(G++) Launch",
+      "type": "cppvsdbg",
+      "request": "launch",
+      "program": "cmd",
+      "args": [
+        "/k",
+        "${fileBasenameNoExtension}.exe"
       ],
       "stopAtEntry": false,
       "preLaunchTask": "g++",
@@ -26,9 +41,9 @@
       "program": "${fileDirname}/${fileBasenameNoExtension}.exe",
       "args": [],
       "stopAtEntry": false,
-      "cwd": "${workspaceFolder}",
+      "cwd": "${fileDirname}",
       "environment": [],
-      "externalConsole": true,
+      "externalConsole": false,
       "MIMode": "gdb",
       "preLaunchTask": "g++",
       "miDebuggerPath": "C:/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/gdb.exe",
