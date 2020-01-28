@@ -5,7 +5,7 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "(GCC) Launch",
+      "name": "(GCC) CMD",
       "type": "cppvsdbg",
       "request": "launch",
       "program": "cmd",
@@ -20,7 +20,7 @@
       "externalConsole": true
     },
     {
-      "name": "(G++) Launch",
+      "name": "(G++) CMD",
       "type": "cppvsdbg",
       "request": "launch",
       "program": "cmd",
@@ -35,7 +35,18 @@
       "externalConsole": true
     },
     {
-      "name": "(gdb) Launch",
+      "name": "(G++) WSL",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${fileDirname}/${fileBasenameNoExtension}.exe",
+      "args": [],
+      "stopAtEntry": false,
+      "preLaunchTask": "g++",
+      "cwd": "${fileDirname}",
+      "environment": []
+    },
+    {
+      "name": "(gdb) Windwos",
       "type": "cppdbg",
       "request": "launch",
       "program": "${fileDirname}/${fileBasenameNoExtension}.exe",
@@ -47,6 +58,27 @@
       "MIMode": "gdb",
       "preLaunchTask": "g++",
       "miDebuggerPath": "C:/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/gdb.exe",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    },
+    {
+      "name": "(gdb) WSL",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${fileDirname}/${fileBasenameNoExtension}.exe",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${fileDirname}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "preLaunchTask": "g++",
+      "miDebuggerPath": "/usr/bin/gdb",
       "setupCommands": [
         {
           "description": "Enable pretty-printing for gdb",

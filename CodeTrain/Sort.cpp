@@ -2,28 +2,22 @@
 using namespace std;
 
 //快速排序
-int partition(int* arr, unsigned int start, unsigned int end) {
-  if (arr == nullptr)
-    return -1;
+int partition(int *arr, unsigned int start, unsigned int end) {
+  if (arr == nullptr) return -1;
   int temp = *(arr + start);
   while (start < end) {
-    while (*(arr + end) > temp && start < end)
-      end--;
-    if (start < end)
-      *(arr + start++) = *(arr + end);
+    while (*(arr + end) > temp && start < end) end--;
+    if (start < end) *(arr + start++) = *(arr + end);
 
-    while (*(arr + start) < temp && start < end)
-      start++;
-    if (start < end)
-      *(arr + end--) = *(arr + start);
+    while (*(arr + start) < temp && start < end) start++;
+    if (start < end) *(arr + end--) = *(arr + start);
   }
 
   *(arr + start) = temp;
   return start;
 }
-void QuickSort(int* arr, unsigned int start, unsigned int end) {
-  if (arr == nullptr || start >= end)
-    return;
+void QuickSort(int *arr, unsigned int start, unsigned int end) {
+  if (arr == nullptr || start >= end) return;
   int k;
   if (start < end) {
     k = partition(arr, start, end);
@@ -33,9 +27,8 @@ void QuickSort(int* arr, unsigned int start, unsigned int end) {
 }
 
 //堆排序
-void buildDown(int* arr, int arrLength, int rootIndex) {
-  if (arr == nullptr || arrLength <= 0 || rootIndex < 0)
-    return;
+void buildDown(int *arr, int arrLength, int rootIndex) {
+  if (arr == nullptr || arrLength <= 0 || rootIndex < 0) return;
 
   int root = arr[rootIndex];
   int childIndex = (rootIndex * 2 + 1);  //左孩子
@@ -54,7 +47,7 @@ void buildDown(int* arr, int arrLength, int rootIndex) {
   }
   arr[rootIndex] = root;
 }
-void HeapSort(int* arr, int arrLength) {
+void HeapSort(int *arr, int arrLength) {
   int temp;
 
   //构建大顶堆  (arrLength - 2) / 2 为最后一个节点的父节点
@@ -70,16 +63,11 @@ void HeapSort(int* arr, int arrLength) {
   }
 }
 
+void merge(int *arr, int arrLength) {}
 
-void merge(int *arr,int arrLength){
-
-}
-
-void printArray(int* arr, int n) {
-  if (arr == nullptr)
-    return;
-  for (int i = 0; i < n; i++)
-    cout << *(arr + i) << "\t";
+void printArray(int *arr, int n) {
+  if (arr == nullptr) return;
+  for (int i = 0; i < n; i++) cout << *(arr + i) << "\t";
   cout << endl;
 }
 
