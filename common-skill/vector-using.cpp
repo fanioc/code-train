@@ -1,7 +1,29 @@
 #include <vector>
+#include <iostream>
 using namespace std;
 
 // origin: https://blog.csdn.net/weixin_41743247/article/details/90635931
+
+void doubleArray() {
+  int i = 0, j = 0;
+  vector<vector<int> > maze(8, vector<int>(12, 0));
+  int A[8][12] = {{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
+                  {1, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0, 1},
+                  {1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1},
+                  {1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 1},
+                  {1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 1},
+                  {1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1},
+                  {1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1},
+                  {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}};
+  int m, n;
+  for (m = 0; m < maze.size(); m++) {
+    for (n = 0; n < maze[m].size(); n++) {
+      maze[m][n] = A[m][n];
+      cout << maze[m][n] << " ";
+    }
+    cout << "\n";
+  }
+}
 
 void init1() {
   //定义具有10个整型元素的向量（尖括号为元素类型名，它可以是任何合法的数据类型），不具有初值，其值不确定
