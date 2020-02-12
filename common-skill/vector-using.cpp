@@ -68,7 +68,7 @@ void operation() {
   a.front();
 
   //返回a的第i元素,当且仅当a存在
-  a[i];
+  a[4];
 
   //清空a中的元素
   a.clear();
@@ -92,7 +92,7 @@ void operation() {
   a.insert(a.begin() + 1, 3, 5);
 
   // b为数组，在a的第一个元素（从第0个元素算起）的位置插入b的第三个元素到第5个元素（不包括b+6）
-  a.insert(a.begin() + 1, b + 3, b + 6);
+  // a.insert(a.begin() + 1, b + 3, b + 6);
 
   //返回a中元素的个数
   a.size();
@@ -125,7 +125,7 @@ void algorithmMix() {
   //对a中的从a.begin()（包括它）到a.end()（不包括它）的元素倒置，但不排列，如a中元素为1,3,2,4,倒置后为4,2,3,1
   reverse(a.begin(), a.end());
   //把a中的从a.begin()（包括它）到a.end()（不包括它）的元素复制到b中，从b.begin()+1的位置（包括它）开始复制，覆盖掉原有元素
-  copy(a.begin(), a.end(), b.begin() + 1);
+  // copy(a.begin(), a.end(), b.begin() + 1);
   //在a中的从a.begin()（包括它）到a.end()（不包括它）的元素中查找10，若存在返回其在向量中的位置
   find(a.begin(), a.end(), 10);
 }
