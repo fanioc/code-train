@@ -1,7 +1,8 @@
 // 链表反转
 // 时间复杂度o(n)
 // 空间复杂度s(1)
-// 
+// timging: 8 ms
+// rank: 84.5%
 
 // Definition for singly-linked list.
 struct ListNode {
