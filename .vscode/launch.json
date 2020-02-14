@@ -47,7 +47,7 @@
     },
     {
       "name": "(gdb) Windwos",
-      "type": "cppdbg",
+      "type": "cppvsdbg",
       "request": "launch",
       "program": "${fileDirname}/${fileBasenameNoExtension}.exe",
       "args": [],
